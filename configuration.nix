@@ -39,6 +39,7 @@
     adwaita-icon-theme
     chromium
     easyeffects
+    gh
     hyprpaper
     hyprpolkitagent
     kdePackages.breeze
