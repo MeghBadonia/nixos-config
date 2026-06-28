@@ -163,7 +163,6 @@
     ollama = {
       enable = true;
       host = "0.0.0.0";
-      package = pkgs.ollama-cuda;
       port = 11434;
     };
     openssh.enable = true;
