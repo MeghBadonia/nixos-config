@@ -107,6 +107,17 @@
 
   # ── Networking ────────────────────────────────────────────────────────────
   networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        22    # SSH
+        80    # HTTP
+        443   # HTTPS
+        8080  # DEV SERVERS
+        11434 # OLLAMA
+      ];
+      allowedUDPPorts = [ ];
+    };
     hostName = "nixy";
     networkmanager = {
       enable = true;
@@ -149,6 +160,12 @@
   # ── Services ──────────────────────────────────────────────────────────────
   services = {
     gvfs.enable = true;
+    ollama = {
+      enable = true;
+      host = "0.0.0.0";
+      package = pkgs.ollama-cuda;
+      port = 11434;
+    };
     openssh.enable = true;
     pipewire = {
       alsa.enable = true;
